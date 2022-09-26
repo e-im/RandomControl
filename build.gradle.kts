@@ -46,11 +46,16 @@ tasks {
         minimize()
         dependsOn(autoReloc)
     }
+
+    runServer {
+        minecraftVersion("1.19.1")
+        systemProperty("Paper.IgnoreJavaVersion", "true")
+    }
 }
 
 bukkit {
     website = "https://github.com/e-im/RandomCOntrol"
     authors = listOf("e-im")
     main = "one.eim.randomcontrol.RandomControl"
-    apiVersion = "1.19"
+    apiVersion = "1.17"
 }
